@@ -26,7 +26,6 @@ type rocket struct {
 	targetY    int
 	color      tcell.Color
 	trailTimer int
-	done       bool
 }
 
 func newFirework(x, y float64) firework {
@@ -81,7 +80,6 @@ func (fw *firework) update() {
 }
 
 func main() {
-	rand.Seed(time.Now().UnixNano())
 	screen, err := tcell.NewScreen()
 	if err != nil {
 		panic(err)
